@@ -11,28 +11,30 @@
                 <field name="state" widget="statusbar" statusbar_visible="draft,enviado,in_progress,aprobado,rechazado,cancel"/>
             </header>
                 <sheet>
-                    <group>
-                        <group>         
-                            <field name="destination" icon="fa-users"></field>
+                    <group name="group_top">
+                        <group name="group_left">         
+                            <field name="destination"></field>
                             <field name="calle"></field>
                             <field name="ciudad"></field>
                             <field name="provincia"></field>
                             <field name="pais"></field>
-                            <field name="description"></field>
-                            <field name="datetime1"></field>
+                            <field name="description"></field>                           
+                        </group>   
+                        <group name="group_right">
+                         <field name="datetime1"></field>
                             <field name="datetime2"></field>
                             <field name="pickup_location"></field>
                             <field name="department_id"></field>
                             <field name="driver_id"></field>
                             <field name="cantidad_pasajeros"></field>
-                        </group>                
+                        </group>                   
                     </group>
-                </sheet>
+                </sheet> 
                 <div class="oe_chatter">
                     <field name="message_follower_ids"></field>
                     <field name="activity_ids"></field>
                     <field name="message_ids"></field>
-                </div>
+                </div>                    
             </form>
         </field>
     </record>
