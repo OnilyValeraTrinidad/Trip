@@ -23,7 +23,10 @@ class Vehicle(models.Model):
     # , required=True, readonly=True, copy=False, tracking=True, default='disponible')
     
     def button_disponible(self):
-        self.state = 'disponible'
+        if(self.state=='disponible'):
+            self.state = 'reservado'
+        else:
+            self.state = 'disponible'    
         
     def button_reservado(self):
         self.state = 'reservado'

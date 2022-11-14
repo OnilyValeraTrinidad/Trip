@@ -8,10 +8,10 @@
             <form string="Vehiculo"  create="false">
                 <header>
                     <button name="button_disponible" type="object" string="Disponible" states="disponible" class="oe_highlight"/>
-                    <button name="button_reservado" type="object" string="Reservar" states="reservar"/>
+                    <!-- <button name="button_reservado" type="object" string="Reservar" states="reservar"/> -->
                     <!-- <button name="action_approve" string="Approve" type="object" attrs="{'invisible':[('user_status','!=','pending')]}" data-hotkey="q"/>
                     <button name="action_refuse" string="Refuse" type="object" attrs="{'invisible':[('user_status','!=','pending')]}" data-hotkey="x"/> -->
-                    <field name="state" widget="statusbar"/>
+                    <field name="state" widget="statusbar" />
                 </header>
                 <sheet>
                     <group>
