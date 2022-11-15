@@ -25,7 +25,13 @@ class Trip(models.Model):
         ('cancel', 'Cancelado'),
     ], string='Status', required=True, readonly=True, copy=False,
     tracking=True, default='draft')
-    
+    priority = fields.Selection([
+        ('0', 'Normal'), 
+        ('1', 'Baja'), 
+        ('2', 'Media'), 
+        ('3', 'Alta'),
+        ('4', 'Muy alta')], string='Priority')
+ 
     def button_send(self):
        self.write({
            'state': "enviado"

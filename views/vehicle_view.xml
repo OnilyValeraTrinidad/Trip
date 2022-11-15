@@ -23,17 +23,6 @@
                         <field name="image" widget="image" /> 
                        </group>  
                     </group>
-                    <!-- <notebook>
-                        <page id="details_tab" string="Detalle" name="detalle">
-                            <tree string="Vehiculo">
-                                <field name="brand"></field>
-                                <field name="car_model"></field>
-                                <field name="year"></field>
-                                <field name="plate_number"></field>
-                                <field name= "tipo_vehiculo"></field>
-                            </tree>
-                        </page>
-                    </notebook> -->
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids"></field>

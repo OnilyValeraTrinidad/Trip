@@ -6,10 +6,11 @@ class Vehicle(models.Model):
     _description = "Mantenimiento de vehiculos"
 
     tipo_vehiculo = fields.Selection([
-        ('50 pasajeros', '50 Pasajeros'),
-        ('30 pasajeros', '30 Pasajeros'),
-        ('15 pasajeros', '15 Pasajeros'),
-        ('5 pasajeros', '5 Pasajeros'),
+        ('1', 'Sedan'),
+        ('2', 'Suv'),
+        ('3', 'Camioneta'),
+        ('4', 'Minibus'),
+        ('5', 'Autobuses'),
     ], string = 'Cantidad de pasajeros', default='other', tracking=True, required = True)
     brand = fields.Char(string = "Marca", required = True)
     car_model = fields.Char(string = "Modelo", required = True)
