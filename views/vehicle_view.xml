@@ -2,25 +2,26 @@
 <odoo>
 <!-- Vista formulario vehiculo -->
     <record id="vehicle_view_form" model="ir.ui.view">
-        <field name="name">vehicle.view.form</field>
+        <field name="name">Vehicle Form</field>
         <field name="model">vehicle</field>
         <field name="arch" type="xml">
-            <form string="Vehiculo"  create="false">
+            <form>
                 <header>
-                    <button name="button_disponible" type="object" string="Disponible" states="disponible" class="oe_highlight"/>                  
-                    <!-- <button name="button_reservado" type="object" string="Reservar" states="reservar"/> -->
-                    <!-- <button name="action_approve" string="Approve" type="object" attrs="{'invisible':[('user_status','!=','pending')]}" data-hotkey="q"/>
-                    <button name="action_refuse" string="Refuse" type="object" attrs="{'invisible':[('user_status','!=','pending')]}" data-hotkey="x"/> -->
-                    <field name="state" widget="statusbar" />
+                    <button name="button_disponible"  type="object" string="avaliable" class="oe_highlight"/>            
+                    <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
-                    <group>
+                    <group name="group_top">
+                    <group name="group_left"> 
                         <field name="brand"></field>
                         <field name="car_model"></field>
                         <field name="tipo_vehiculo"></field>
                         <field name="year"></field>
                         <field name="plate_number"></field>
-                        <field name="image" widget="image" class="oe_avatar"></field>    
+                         </group> 
+                       <group name="group_right"> 
+                        <field name="image" widget="image" /> 
+                       </group>  
                     </group>
                 </sheet>
                 <div class="oe_chatter">
@@ -41,7 +42,7 @@
                 <field name="car_model"></field>
                 <field name="year"></field>
                 <field name="plate_number"></field>
-                <field name= "tipo_vehiculo"></field>
+                <field name= "tipo_vehiculo"></field>               
                 <field name="state" string="Estatus" widget="badge" decoration-info="state == 'disponible'" decoration-danger="state == 'reservado'"></field>
             </tree>
         </field>

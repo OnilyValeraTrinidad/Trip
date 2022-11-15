@@ -26,11 +26,12 @@
     'auto_install': False,
     # always loaded
     'data': [
+        'security/transportacion_security.xml',
+        'security/ir.model.access.csv',
         'views/transportacion_menu.xml',
         'views/trip_view.xml',
         'views/vehicle_view.xml',
-        'security/transportacion_security.xml',
-        'security/ir.model.access.csv',
+        
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -16,11 +16,12 @@ class Vehicle(models.Model):
     car_model = fields.Char(string = "Modelo", required = True)
     year = fields.Date(string = "Año", required = True)
     plate_number = fields.Char(string = "Placa", required = True)
-    image = fields.Binary(string = "Imagen")
+    image = fields.Binary()
+
     state = fields.Selection([
         ('disponible', 'Disponible'),
         ('reservado', 'Reservado'),
-    ], string='Status')
+    ], string='Status',default='disponible')
     # , required=True, readonly=True, copy=False, tracking=True, default='disponible')
     
     def button_disponible(self):

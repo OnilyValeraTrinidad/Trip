@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-viaje_group_user,acceso a viajes,model_trip,base.group_user,1,1,1,1
-vehicle_group_user,acceso a vehiculo,model_vehicle,base.group_user,1,1,1,1
+access_viaje__user,ViajeUser,model_trip,viaje_group_user,1,1,1,0
+access_viaje_manage,ViajeManager,model_trip,viaje_group_manager,1,1,1,1
+access_vehicle_user,VehicleUser,model_vehicle,viaje_group_user,1,1,1,0
+access_viaje_manage,ViajeManager,model_vehicle,viaje_group_manager,1,1,1,1
