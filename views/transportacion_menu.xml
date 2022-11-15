@@ -1,4 +1,4 @@
-<odoo>
+<odoo> 
 <record id="trip_action" model="ir.actions.act_window">
   <field name="name">Viajes</field>
   <field name="res_model">trip</field>
