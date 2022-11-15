@@ -2,13 +2,13 @@
 <odoo>
 <!-- Vista formulario viaje-->
     <record id="trip_view_form" model="ir.ui.view">
-        <field name="name">trip.view.form</field>
+        <field name="name">trip form</field>
         <field name="model">trip</field>
         <field name="arch" type="xml">
             <form string="Trip">
             <header>
                 <button name="button_send" class="oe_highlight" states="draft" string="Enviar" type="object" help="Enviar solicitud"/>
-                <field name="state" widget="statusbar" statusbar_visible="draft,enviado,in_progress,aprobado,rechazado,cancel"/>
+                <field name="state" widget="statusbar"/>
             </header>
                 <sheet>
                     <group name="group_top">
@@ -18,7 +18,8 @@
                             <field name="ciudad"></field>
                             <field name="provincia"></field>
                             <field name="pais"></field>
-                            <field name="description"></field>                           
+                            <field name="description"></field>    
+                            <field name="priority" widget="priority" string="Prioridad"></field>                      
                         </group>   
                         <group name="group_right">
                          <field name="datetime1"></field>
@@ -40,7 +41,7 @@
     </record>
     <!-- Vista tree Viaje -->
     <record id="trip_view_tree" model="ir.ui.view">
-        <field name="name">trip.view.tree</field>
+        <field name="name">trip tree</field>
         <field name="model">trip</field>
         <field name="arch" type="xml">
             <tree string="Trip">              
@@ -49,6 +50,7 @@
                 <field name="destination"></field>
                 <field name="calle"></field>
                 <field name="state" string="Estatus" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'enviado'"></field>
+                <field name="priority" string="Prioridad" widget="priority"></field>
                 <field name="ciudad"></field>
                 <field name="provincia"></field>
                 <field name="pais"></field>
